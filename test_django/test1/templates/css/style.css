@@ -1,0 +1,99 @@
+/* Heading Box Begin */
+.heading {
+  background: #f4f4f4;
+  border-bottom: #ccc 3px solid;
+  padding: 20px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Heading Box End */
+
+/* Navbar Brand Title Begin */
+.nav_brand {
+  font-family: "Bubblegum Sans";
+  font-size: 72px;
+  color: #ff8000;
+  text-decoration: none !important;
+}
+/* Navbar Brand Title End */
+
+/* Label Text Begin */
+.lable_text {
+  font-size: 24px;
+  color: #999999;
+  text-decoration: none !important;
+}
+/* Label Text End */
+
+/* Head Text Begin */
+.head_text {
+  font-size: 30px;
+  color: #ff8000;
+  text-decoration: none !important;
+}
+/* Head Text End */
+
+/* paragraph style Begin */
+.pg_text {
+  font-size: 20px;
+  color: #999999;
+  text-decoration: none !important;
+}
+/* paragraph style End */
+
+/* Highlight Text Begin */
+.highlight1 {
+  color: #24222171;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+
+.highlight2 {
+  color: #ff8000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+
+.highlight3 {
+  font-size: 20px;
+  color: #999999;
+  text-decoration: none !important;
+}
+
+/* Highlight Text */
+
+/* Full Screen Image Begin */
+.full-width-image {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+}
+
+.full-width-image img {
+  width: 100%;
+}
+/* Full Screen Image End */
+
+/* Model Input form */
+
+.model_heading {
+  color: #4169e1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.model_sub_heading {
+  color: #057afe;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+}
+
+/* Model Input form */
+
+/* Mouse cursor Effects Begin */
+
+/* Mouse cursor Effects End */

@@ -1,0 +1,37 @@
+{% extends "firstapp/header.html" %}
+
+{% block content %}
+<!-- <table>
+		<thead>
+			<tr>
+				<th> Name </th>
+				<th> Email </th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for details in alldetails %}
+		<tr>
+		<td>{{ details.name }}</td>
+		<td>{{ details.email }}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+    </table> -->
+<div id = 'name'></div>
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript">
+$(document).ready(function(){ 
+	$.ajax({
+	url : '/details1/',
+	type:'GET',
+	dataType: "json",
+	data: {},
+	success:function(data){
+	$('#name').html(data.status);
+}
+})
+})
+// $('#name').html("data");
+</script>
+{% endblock %}

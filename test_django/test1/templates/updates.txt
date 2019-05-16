@@ -1,0 +1,3 @@
+horizontal scrollbard is hidden now
+added blur effect to full-page image.
+added graph images mobile hand images.

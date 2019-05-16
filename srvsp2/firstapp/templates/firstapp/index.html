@@ -1,0 +1,15 @@
+{% extends "firstapp/header.html" %}
+
+{% block content %}
+{% include "firstapp/extra.html" %}
+<p> ReGISTER HERE </p>
+<form class="contact-form" method="post" action="/form_submit/">
+	{% csrf_token %}
+    <span>name</span>
+    <input type="text" name="name" placeholder="Enter Name"></br>
+    <span>email</span>
+    <input type="email" name="email" placeholder="Enter Email Address"></br>
+    <input type="submit" value="submit"> 
+	
+</form>
+{% endblock %}

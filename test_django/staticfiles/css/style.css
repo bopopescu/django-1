@@ -1,0 +1,38 @@
+.para {
+    text-align: center;
+    padding: 1px 75px 5px 5px;
+    position: relative;
+}
+
+.centered {
+    position: absolute;
+    top: 55%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+}
+
+#loading {
+    -webkit-animation: rotation 3s infinite linear;
+
+}
+
+.footer {
+  padding-top: 25px;
+  padding-bottom: 1rem;
+  background-color: #0084f9;
+  color: #fff;
+}
+
+.copyright {
+  background-color: #0084f9;
+}
+
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}

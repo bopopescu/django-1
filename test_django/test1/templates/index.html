@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Envis</title>
+    <meta charset="utf-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,200italic,600italic&subset=latin,vietnamese"
+        rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    
+    <script src="{% static '/js/login_captcha.js' %}"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</head>
+
+<body onload="createCaptcha()">
+    <!-- Navbar Begin -->
+
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+        <div class="container">
+            <a class="navbar-brand mb-2" href="index.html">
+                <h1>Envis</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown show">
+                        <a class="nav-link" href="#"><i class="fa fa-home" style="font-size:18px"></i> Home</a>
+                    </li>
+                    <li class="nav-item dropdown show">
+                        <a class="nav-link" href="{% url 'products' %}"><i class="fa fa-cubes" style="font-size:18px">
+                                Products</i></a>
+                    </li>
+                    <li class="nav-item dropdown show">
+                        <a class="nav-link" href="{% url 'about' %}"><i class="fa fa-info-circle" style="font-size:18px"></i>
+                            About
+                            us</a>
+                    </li>
+                    <li class="nav-item dropdown show">
+                        <a class="nav-link" href="#"><i class="fa fa-question" style="font-size:18px"></i> Help</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown show">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Login / Register <i
+                                class="fa fa-user" style="font-size:18px"></i></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" data-toggle="modal" data-target="#myModal">Login
+                                <i class="fa fa-sign-in" style="font-size:18px;color: #0077fd;"></i></a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#myModal1">Register
+                                <i class="fa fa-external-link-square" style="font-size:16px;color: #0077fd"></i></a>
+                            <!-- <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Logout
+                                <i class="fa fa-sign-out" style="font-size:18px; color: #0077fd;"></i></a> -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Heading Begin -->
+    <div class="container-fluid heading mb-3">
+        <div class="container">
+            <a class="text-left nav_brand" href="index.html">
+                <h1 class="text-left nav_brand">Envis</h1>
+            </a>
+            <!-- <h1 class="text-left nav_brand">Envis</h1> -->
+        </div>
+    </div>&nbsp;
+    <!-- Heading End -->
+
+    <!-- Content Begin -->
+    <div class="container text-right ">
+        <div class="row ">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3 text-center" style="background-color:#fff;">
+                <a class="lable_text" href="index.html">
+                    <h1 class="text-left lable_text">Smart Home</h1>
+                </a>
+            </div>
+            <div class="col-sm-3 text-center" style="background-color:#fff;">
+                <a class="lable_text" href="index.html">
+                    <h1 class="text-left lable_text">Industry</h1>
+                </a>
+            </div>
+            <div class="col-sm-3 text-left" style="background-color:#fff;">
+                <a class="lable_text" href="index.html">
+                    <button class="btn btn-primary">Buy Now</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <br />
+    <!-- Content End -->
+
+
+    <!-- Main Image Begin -->
+    <div class="container">
+        <img class="img-fluid" src="{% static '/imgs/b.jpg' %}" oncontextmenu="return false;">
+    </div>&nbsp;
+    <!-- Main Image End -->
+
+    <!-- Cards Begin -->
+    <div class="container">
+        <div class="card-deck">
+            <div class="card bg-light shadow p-5 mb-4 bg-white">
+                <div class="card-body text-center">
+                    <div class="container">
+                        <i class="fa fa-home" style="font-size:158px;color: #0077fd;"></i>
+                    </div>
+                    <p class="lable_text">Smart Home</p>
+                </div>
+            </div>
+            <div class="card bg-light shadow p-5 mb-4 bg-white">
+                <div class="card-body text-center">
+                    <div class="container">
+                        <i class="fa fa-industry" style="font-size:128px;color: #870bdaa6;"></i>
+                    </div>
+                    <br>
+                    <p class="lable_text">Industry</p>
+                </div>
+            </div>
+            <div class="card bg-light shadow p-5 mb-4 bg-white">
+                <div class="card-body text-center">
+                    <div class="container">
+                        <i class="fa fa-cubes" style="font-size:128px;color: #fd5000;"></i>
+                    </div>
+                    <br>
+                    <p class="lable_text">Products</p>
+                </div>
+            </div>
+        </div>
+    </div>&nbsp;
+    <!-- Cards End -->
+
+    <!-- Sub Sections Begin -->
+    <div class="container">
+        <div class="row ">
+            <div class="col-sm-3">
+                <h3 class="head_text">Monitor energy use over time</h3>&nbsp;
+                <p class="pg_text">Set goals and monitor your power consumption of the month to make sure you stay on
+                    budget.</p>
+            </div>
+            <div class="col-sm-3">
+                <h3 class="head_text">Set device-level Alerts</h3>&nbsp;
+                <p class="pg_text">Set alerts when there is more power utilized,based on that use and control the
+                    appliances.</p>
+            </div>
+            <div class="col-sm-3">
+                <h3 class="head_text">Find the sources of energy wastage</h3>&nbsp;
+                <p class="pg_text">Find energy consumption, identify peak loads, and see how much they're costing you.
+                </p>
+            </div>
+            <div class="col-sm-3">
+                <h3 class="head_text"> Keep an eye on your home</h3>&nbsp;
+                <p class="pg_text">Stay safe and secure by checking if the appliances was left on, or you forgot to
+                    unplugged.</p>
+            </div>
+        </div>
+    </div>&nbsp;
+    <!-- Sub Sections End -->
+
+
+    <!-- Full Screen Image Begin -->
+    <div class="full-width-image">
+        <img class="img-fluid w3-opacity-min" src="{% static '/imgs/dash.jpg' %}" alt="" height="450px" oncontextmenu="return false;">
+    </div>&nbsp;
+    <!-- Full Screen Image End-->
+
+    <!-- Part-1 Begin -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="head_text">Monitor your Energy Consumption</h1>&nbsp;
+                <h1 class="pg_text">Anywhere in the world, anytime !</h1>
+                <p class="pg_text">Envis enables you to see exactly how much electricity is being used in your home.</p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-fluid" src="{% static '/imgs/mobile.png' %}" alt="" width="350px" oncontextmenu="return false;">
+            </div>
+        </div>
+    </div>&nbsp;
+    <!-- Part-1 End -->
+
+    <!-- Part-2 Begin -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-fluid" src="{% static '/imgs/pc_ipad.jpg' %}" alt="" oncontextmenu="return false;">
+            </div>
+            <div class="col-sm-6">
+                <h1 class="head_text">Manage your budget based on energy consumption.</h1>&nbsp;
+                <h1 class="highlight3">Monitor and manage energy in real-time on desktop, smartphones.
+                </h1>
+                <h1 class="highlight3">Download your hourly,daily, weekly, monthly or average data.</h1>
+                <h1 class="highlight3">Use the Envis to reduce your home energy usage.</h1>
+                <h1 class="highlight3">By monitoring your consumption you can reduce your electricity hogs and save
+                    money on your electricity bills every day.</h1>
+                &nbsp;
+            </div>
+        </div>
+    </div>&nbsp;
+    <!-- Part-2 End -->
+
+    <!-- Part -3 Begin -->
+    <div class="container">
+        <div class="container">
+            <h1 class="head_text">All the Information you need to know</h1>&nbsp;
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="container text-center shadow p-5 mb-4 bg-white">
+                    <img class="image-fluid" src="{% static '/imgs/energy_now.gif' %}" alt="" width="230px"
+                        oncontextmenu="return false;">
+                    <p class="lable_text">Energy Now</p>
+                    <p class="pg_text">Instant energy information is key to successful home energy management, after all
+                        you can't save what you can't see!</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="container text-center shadow p-5 mb-4 bg-white">
+                    <img class="image-fluid" src="{% static '/imgs/budget1.png' %}" alt="" width="210px"
+                        oncontextmenu="return false;">
+                    <p class="lable_text">Budget</p>
+                    <p class="pg_text">A great way to save money is planning a budget.This feature lets you set your
+                        own monthly target and will show you exactly where you are in relation to that.</p>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <div class="container text-center shadow p-5 mb-4 bg-white">
+                    <img class="image-fluid" src="{% static '/imgs/COST.png' %}" alt="" width="230px"
+                        oncontextmenu="return false;"><br>
+                    <p class="lable_text">Cost so Far</p>
+                    <p class="pg_text">See how much you have spent so far. You can choose to see what you have spent
+                        so far today, this week, this month or from a date of your choice.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Part-3 End -->
+
+    <!-- Part-4 Begin -->
+    <div class="container text-center shadow p-5 mb-4 bg-white">
+        <img class="image-fluid" src="./imgs/graph.png" alt="" width="80%" oncontextmenu="return false;"><br>
+        <p class="lable_text">Daily Usage History</p>
+        <p class="pg_text">See how much you have spent every hour every day.By toggling between Hourly & Daily </p>
+    </div>
+    <!-- Part-4 End -->
+
+    <!-- Part-5 Begin -->
+    <div class="container text-center shadow p-5 mb-4 bg-white">
+        <img class="image-fluid" src="{% static '/imgs/history.png' %}" alt="" width="80%" oncontextmenu="return false;"><br>
+        <p class="lable_text">Monthly Usage History</p>
+        <p class="pg_text">See history you have spent every month for entire Year.</p>
+    </div>
+    <!-- Part-5 End -->
+
+
+    <div class="container">
+
+        <!-- Login Form Modal Begin-->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <div class="container text-center">
+                            <h4 class="model_heading"> Welcome to Envis</h4>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6 mx-auto">
+                                <div class="card card-body">
+                                    <!-- <img class="logo" src="/img/logo.png"> -->
+                                    <h3 class="text-center model_sub_heading">Envis Login</h3>
+                                    <form onsubmit="return validateCaptcha()" method="post" action="login">
+                                         {% csrf_token %}
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="text" placeholder="Email/Username" name="email"
+                                                class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" placeholder="Password" name="password"
+                                                class="form-control" required>
+                                        </div>
+                                        <div class="container mx-5">
+                                            <div class="d-flex">
+                                                <div class="p-2">
+                                                    <div id="captcha"></div>
+                                                </div>
+                                                <div class="p-2">
+                                                    <img class="img-fluid" src="./imgs/getcaptcha.png"
+                                                        onclick="createCaptcha()">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter Above Captcha Code"
+                                                class="form-control" id="cpatchaTextBox" />
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Form Modal End -->
+
+
+    <!-- Registration Form Modal Begin-->
+    <div class="container">
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <div class="container text-center">
+                            <h4 class="model_heading"> Welcome to Envis</h4>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6 mx-auto">
+                                <div class="card card-body">
+                                    <!-- <img class="logo" src="/img/logo.png"> -->
+                                    <h3 class="text-center model_sub_heading">Envis Registration</h3>
+                                    <form onsubmit="" method="post" action="#">
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="name" placeholder="Enter a Username" name="name"
+                                                class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" placeholder="Email/Username" name="email"
+                                                class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" placeholder="Password" name="password"
+                                                class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password1">Confirm Password</label>
+                                            <input type="password" placeholder="Confirm Password" name="password1"
+                                                class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mac_id">Mac Id</label>
+                                            <input type="mac_id" placeholder="Enter Mac_Address from Device"
+                                                name="mac_id" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">Machine Name</label>
+                                            <input type="machine_name" placeholder="Enter a Machine Name"
+                                                name="machine_name" class="form-control" required>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-success">Register</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration Form Modal End -->
+
+
+
+
+    <!-- Footer Begin -->
+
+    <div class="container-fluid" style="background:#007bff">
+        <div class="container">
+            &nbsp;
+            <div class="row">
+                <div class="col-md-3 col-md-offset-1 col-sm-6">
+                    <h4 class="text-white">&nbsp;Envis</h4>
+                    <div><a href="" class="text-white btn">About us</a></div>
+                    <div><a href="" class="text-white btn">Privacy Policy</a></div>
+                    <div><a href="" class="text-white btn">Contact us</a></div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <h4 class="text-white">&nbsp;Products</h4>
+                    <div><a href="" class="text-white btn">Envis </a></div>
+                    <div>
+                        <a href="" class="text-white btn">Envis Pro <span class="badge badge-danger">New</span></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <h4 class="text-white">&nbsp;Use Cases</h4>
+                    <div><a href="" class="text-white btn">Smart Home</a></div>
+                    <div><a href="" class="text-white btn">Industry</a></div>
+                    <div><a href="" class="text-white btn">Live Demo</a></div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <h2 class="text-white text-center">Envis <span>™ </span></h2>
+                    <div class="text-center">
+                        <a href="" class="text-white btn"><i class="fa fa-facebook-f" style="font-size:20px"></i></a>
+                        <a href="" class="text-white btn"><i class="fa fa-twitter" style="font-size:20px"></i></a>
+                        <a href="" class="text-white btn"><i class="fa fa-linkedin " style="font-size:20px"></i></a>
+                        <a href="" class="text-white btn"><i class="fa fa-reddit-alien" style="font-size:20px"></i></a>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <div class="container text-center text-white">
+                <p>© Envis 2019. All Rights Reserved</p>
+            </div>
+            &nbsp;
+        </div>
+    </div>
+    <!-- Footer End -->
+</body>
+<script>
+    function validateCaptcha() {
+  // event.preventDefault();
+  // debugger;
+  alert(document.getElementById("cpatchaTextBox").value);
+  if(document.getElementById("cpatchaTextBox").value != "")
+  {
+  
+  if (document.getElementById("cpatchaTextBox").value == code) {
+    var email = document.forms["RegForm"]["email"];      
+    var password = document.forms["RegForm"]["password"]; 
+         if (email.value == "")                
+          { 
+            var msg = "Please enter a valid User name."; 
+            document.getElementById("email_error_msg").innerHTML=msg;
+            email.focus(); 
+            return false; 
+          } 
+          
+
+        
+
+          else
+            document.getElementById("email_error_msg").innerHTML="";
+          if (password.value == "")                 
+          { 
+            var msg = "Please enter a valid password`."; 
+            document.getElementById("password_error_msg").innerHTML=msg;
+            password.focus(); 
+            return false; 
+          } 
+          else
+            document.getElementById("password_error_msg").innerHTML="";
+
+
+   
+    // test();
+   
+    return true; 
+
+  }
+   else {
+   
+        var msg = "Invalid Captcha.";
+        // $('#error_msg').innerHTML= "msg";
+        document.getElementById("error_msg").innerHTML=msg;
+        createCaptcha();
+        return false; 
+  }
+}
+else
+{
+    alert("eneter captcha");
+    return false;
+}
+}
+  
+
+</script>
+
+</html>
